@@ -1,7 +1,7 @@
 {
   "name": "dnd-character-sheets",
-  "version": "1.0.0",
-  "description": "Dungeons and Dragons 5th Edition chracter sheets created in ReactJS.",
+  "version": "0.1.0",
+  "description": "Dungeons and Dragons 5th Edition character sheets created in ReactJS.",
   "author": "DarylBuckle",
   "license": "MIT",
   "repository": "DarylBuckle/dnd-character-sheets",
