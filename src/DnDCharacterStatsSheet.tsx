@@ -1,5 +1,8 @@
 import React from 'react'
-import './App.css'
+
+// eslint-disable-next-line no-unused-vars
+import DnDCharacter from './DnDCharacter'
+
 import Statbox from './Components/StatBox'
 import StatRow from './Components/StatRow'
 import Skill from './Components/Skill'
@@ -7,8 +10,8 @@ import StatBox2 from './Components/StatBox2'
 import DeathSave from './Components/DeathSave'
 import AttackTable from './Components/AttackTable'
 import Currency from './Components/Currency'
-// eslint-disable-next-line no-unused-vars
-import DnDCharacter from './DnDCharacter'
+
+import './dndstyles.css'
 
 interface IDnDCharacterStatsSheetProps {
   character?: DnDCharacter
@@ -38,16 +41,6 @@ class DnDCharacterStatsSheet extends React.Component<
       initialState.character = props.defaultCharacter
     }
     this.state = initialState
-    // const lsData = localStorage.getItem('d-and-d-character-data')
-    // if (lsData) {
-    //  try {
-    //    this.state = JSON.parse(lsData)
-    //  } catch {}
-    // }
-  }
-
-  componentDidUpdate() {
-    // localStorage.setItem('d-and-d-character-data', JSON.stringify(this.state))
   }
 
   updateCharacter(name: string, value: any) {
@@ -88,7 +81,7 @@ class DnDCharacterStatsSheet extends React.Component<
               <div className='d-and-d-attribute-collection char-name pr-3 pl-3'>
                 <input
                   type='text'
-                  value={character.name}
+                  value={character.name ? character.name : ''}
                   onChange={(e) => this.updateCharacter('name', e.target.value)}
                 />
               </div>
@@ -109,7 +102,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   <div className='col-md-3 col-6 pl-0 pr-0'>
                     <input
                       type='text'
-                      value={character.classLevel}
+                      value={character.classLevel ? character.classLevel : ''}
                       onChange={(e) =>
                         this.updateCharacter('classLevel', e.target.value)
                       }
@@ -119,7 +112,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   <div className='col-md-3 col-6 pl-0 pr-0'>
                     <input
                       type='text'
-                      value={character.background}
+                      value={character.background ? character.background : ''}
                       onChange={(e) =>
                         this.updateCharacter('background', e.target.value)
                       }
@@ -129,7 +122,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   <div className='col-md-3 col-6 pl-0 pr-0'>
                     <input
                       type='text'
-                      value={character.playerName}
+                      value={character.playerName ? character.playerName : ''}
                       onChange={(e) =>
                         this.updateCharacter('playerName', e.target.value)
                       }
@@ -139,7 +132,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   <div className='col-md-3 col-6 pl-0 pr-0'>
                     <input
                       type='text'
-                      value={character.faction}
+                      value={character.faction ? character.faction : ''}
                       onChange={(e) =>
                         this.updateCharacter('faction', e.target.value)
                       }
@@ -151,7 +144,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   <div className='col-md-3 col-6 pl-0 pr-0'>
                     <input
                       type='text'
-                      value={character.race}
+                      value={character.race ? character.race : ''}
                       onChange={(e) =>
                         this.updateCharacter('race', e.target.value)
                       }
@@ -161,7 +154,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   <div className='col-md-3 col-6 pl-0 pr-0'>
                     <input
                       type='text'
-                      value={character.alignment}
+                      value={character.alignment ? character.alignment : ''}
                       onChange={(e) =>
                         this.updateCharacter('alignment', e.target.value)
                       }
@@ -171,7 +164,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   <div className='col-md-3 col-6 pl-0 pr-0'>
                     <input
                       type='text'
-                      value={character.xp}
+                      value={character.xp ? character.xp : ''}
                       onChange={(e) =>
                         this.updateCharacter('xp', e.target.value)
                       }
@@ -181,7 +174,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   <div className='col-md-3 col-6 pl-0 pr-0'>
                     <input
                       type='text'
-                      value={character.dciNo}
+                      value={character.dciNo ? character.dciNo : ''}
                       onChange={(e) =>
                         this.updateCharacter('dciNo', e.target.value)
                       }
@@ -535,7 +528,11 @@ class DnDCharacterStatsSheet extends React.Component<
               </div>
               <div className='d-and-d-box mt-4'>
                 <textarea
-                  value={character.otherProficiencies}
+                  value={
+                    character.otherProficiencies
+                      ? character.otherProficiencies
+                      : ''
+                  }
                   onChange={(e) =>
                     this.updateCharacter('otherProficiencies', e.target.value)
                   }
@@ -553,7 +550,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   <div className='col-4 pr-2'>
                     <StatBox2
                       classes='shield'
-                      label_top='Armour'
+                      labelTop='Armour'
                       label='Class'
                       name='ac'
                       value={character.ac}
@@ -598,7 +595,7 @@ class DnDCharacterStatsSheet extends React.Component<
                       type='text'
                       style={{ width: 'calc(100% - 95px)' }}
                       className='d-and-d-linput'
-                      value={character.maxHp}
+                      value={character.maxHp ? character.maxHp : ''}
                       onChange={(e) =>
                         this.updateCharacter('maxHp', e.target.value)
                       }
@@ -607,7 +604,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   <input
                     type='text'
                     className='d-and-d-cinput'
-                    value={character.hp}
+                    value={character.hp ? character.hp : ''}
                     onChange={(e) => this.updateCharacter('hp', e.target.value)}
                   />
                   <label className='d-and-d-title' style={{ marginTop: '5px' }}>
@@ -621,7 +618,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   <input
                     type='text'
                     className='d-and-d-cinput'
-                    value={character.tempHp}
+                    value={character.tempHp ? character.tempHp : ''}
                     onChange={(e) =>
                       this.updateCharacter('tempHp', e.target.value)
                     }
@@ -643,7 +640,9 @@ class DnDCharacterStatsSheet extends React.Component<
                           type='text'
                           style={{ width: 'calc(100% - 25px)' }}
                           className='d-and-d-linput'
-                          value={character.hitDiceMax}
+                          value={
+                            character.hitDiceMax ? character.hitDiceMax : ''
+                          }
                           onChange={(e) =>
                             this.updateCharacter('hitDiceMax', e.target.value)
                           }
@@ -652,7 +651,7 @@ class DnDCharacterStatsSheet extends React.Component<
                       <input
                         type='text'
                         className='d-and-d-cinput'
-                        value={character.hitDice}
+                        value={character.hitDice ? character.hitDice : ''}
                         onChange={(e) =>
                           this.updateCharacter('hitDice', e.target.value)
                         }
@@ -708,7 +707,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   }}
                 />
                 <textarea
-                  value={character.attacksText}
+                  value={character.attacksText ? character.attacksText : ''}
                   onChange={(e) =>
                     this.updateCharacter('attacksText', e.target.value)
                   }
@@ -766,7 +765,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   <div className='col'>
                     <textarea
                       className='d-and-d-equipment-indent'
-                      value={character.equipment}
+                      value={character.equipment ? character.equipment : ''}
                       onChange={(e) =>
                         this.updateCharacter('equipment', e.target.value)
                       }
@@ -775,7 +774,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   </div>
                   <div className='col-md-12'>
                     <textarea
-                      value={character.equipment2}
+                      value={character.equipment2 ? character.equipment2 : ''}
                       onChange={(e) =>
                         this.updateCharacter('equipment2', e.target.value)
                       }
@@ -804,7 +803,11 @@ class DnDCharacterStatsSheet extends React.Component<
                   }}
                 >
                   <textarea
-                    value={character.personalityTraits}
+                    value={
+                      character.personalityTraits
+                        ? character.personalityTraits
+                        : ''
+                    }
                     onChange={(e) =>
                       this.updateCharacter('personalityTraits', e.target.value)
                     }
@@ -822,7 +825,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   }}
                 >
                   <textarea
-                    value={character.ideals}
+                    value={character.ideals ? character.ideals : ''}
                     onChange={(e) =>
                       this.updateCharacter('ideals', e.target.value)
                     }
@@ -840,7 +843,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   }}
                 >
                   <textarea
-                    value={character.bonds}
+                    value={character.bonds ? character.bonds : ''}
                     onChange={(e) =>
                       this.updateCharacter('bonds', e.target.value)
                     }
@@ -858,7 +861,7 @@ class DnDCharacterStatsSheet extends React.Component<
                   }}
                 >
                   <textarea
-                    value={character.flaws}
+                    value={character.flaws ? character.flaws : ''}
                     onChange={(e) =>
                       this.updateCharacter('flaws', e.target.value)
                     }
@@ -870,7 +873,9 @@ class DnDCharacterStatsSheet extends React.Component<
               <div className='d-and-d-box mt-3'>
                 <textarea
                   style={{ paddingBottom: '5px' }}
-                  value={character.featuresTraits}
+                  value={
+                    character.featuresTraits ? character.featuresTraits : ''
+                  }
                   onChange={(e) =>
                     this.updateCharacter('featuresTraits', e.target.value)
                   }

@@ -12,3 +12,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app-holder {
+  margin-top: 100px;
+}
+
+.navbar {
+  transition: top .3s, background-color .5s;
+}
+.navbar .btn{
+  margin: 5px;
+}
+
+@media print
+{
+  .app-holder {
+    margin-top: 0px;
+  }
+}
