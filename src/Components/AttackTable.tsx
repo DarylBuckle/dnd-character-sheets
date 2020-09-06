@@ -5,9 +5,8 @@ function AttackTable(props: {
   name: string
   value?: any
   classes?: string
+  rows: number
 }) {
-  const rows = 3
-
   function updateValue(index: React.Key, field: string, v: string) {
     const value = getValue().slice()
     value[index][field] = v
@@ -19,7 +18,7 @@ function AttackTable(props: {
     if (!value) {
       value = []
     }
-    while (value.length < rows) {
+    while (value.length < props.rows) {
       value.push({})
     }
     return value

@@ -700,6 +700,7 @@ class DnDCharacterStatsSheet extends React.Component<
 
               <div className='d-and-d-box mt-3'>
                 <AttackTable
+                  rows={3}
                   name='attacks'
                   value={character.attacks}
                   onChange={(name: string, value: any) => {

@@ -6,7 +6,7 @@ function StatBox2(props: {
   onChange: (arg0: any, arg1: string) => void
   name: any
   labelTop?: {} | null | undefined
-  label: React.ReactNode
+  label?: React.ReactNode
 }) {
   let classes = 'd-and-d-statbox type2'
   if (props.classes) {
@@ -28,9 +28,11 @@ function StatBox2(props: {
             <label className='label-top'>{props.labelTop}</label>
           </div>
         ) : null}
-        <div>
-          <label>{props.label}</label>
-        </div>
+        {props.label != null ? (
+          <div>
+            <label>{props.label}</label>
+          </div>
+        ) : null}
       </div>
     </div>
   )

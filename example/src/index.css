@@ -18,15 +18,43 @@ code {
 }
 
 .navbar {
-  transition: top .3s, background-color .5s;
+  transition: top .5s, background-color .5s;
 }
 .navbar .btn{
   margin: 5px;
+}
+
+.page-space {
+  height: 10px;
+  background-color: rgb(100, 100, 100);
+}
+
+footer a, footer a:link, footer a:active, footer a:hover, footer a:visited {
+  color: white !important;
+}
+
+footer ul li {
+  margin: 5px 0;
+}
+
+@media all {
+  .page-break { display: none; }
 }
 
 @media print
 {
   .app-holder {
     margin-top: 0px;
+  }
+  .page-break { 
+    display: block;
+    page-break-before: always;
+  }
+  .page-space { 
+    background-color: transparent;
+    height: 1px;
+  }
+  .no-print {
+    display: none;
   }
 }

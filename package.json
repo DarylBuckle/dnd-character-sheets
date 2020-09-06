@@ -1,9 +1,18 @@
 {
   "name": "dnd-character-sheets",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Dungeons and Dragons 5th Edition character sheets created in ReactJS.",
   "author": "DarylBuckle",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "Dungeons",
+    "Dragons",
+    "Dnd",
+    "Dungeons and Dragons",
+    "Character",
+    "Character Sheet"
+  ],
   "repository": "DarylBuckle/dnd-character-sheets",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
@@ -21,7 +30,8 @@
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "publish": "npm publish"
   },
   "peerDependencies": {
     "react": "^16.0.0"
