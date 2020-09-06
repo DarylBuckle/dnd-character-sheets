@@ -35,7 +35,7 @@ const App = (props: any) => {
     if (characterToLoad) {
       setLoading(true)
       axios
-        .get('/characters/' + characterToLoad + '.json')
+        .get('characters/' + characterToLoad + '.json')
         .then((response: any) => {
           setLoading(false)
           try {

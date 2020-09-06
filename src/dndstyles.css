@@ -18,9 +18,9 @@
 
 .d-and-d-character-sheet textarea
 {
-  line-height: 4ch;
-  background-image: linear-gradient(transparent, transparent calc(4ch - 1px), rgb(207, 207, 207) 0px);
-  background-size: 100% calc(4ch + 0px);
+  line-height: 25px;
+  background-image: linear-gradient(transparent, transparent calc(25px - 1px), rgb(207, 207, 207) 0px);
+  background-size: 100% calc(25px + 0px);
   width: 100%;
   border: none;
   resize: none;
