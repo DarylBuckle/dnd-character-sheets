@@ -13,7 +13,7 @@
 * [Install](#install)
 * [Usage](#usage)
 * [Props](#props)
-* [DnDCharacter](#dndcharacter)
+* [DnDCharacter Class](#dndcharacter-class)
 * [License](#license)
 
 
