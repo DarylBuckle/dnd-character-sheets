@@ -80,7 +80,7 @@ const App = (props: any) => {
   window.onscroll = function() {onScroll()};
   function onScroll() {
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
+    if (prevScrollpos > currentScrollPos || currentScrollPos < 20) {
       setNavTop(0)
     } else {
       setNavTop(-280);
