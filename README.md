@@ -21,7 +21,7 @@
 
 ReactJS components that render Dungeons & Dragons character sheets, namely a character stats sheet, character profile sheet and spell sheet.
 
-Visit [https://darylbuckle.github.io/DarylBuckle/dnd-character-sheets](https://darylbuckle.github.io/DarylBuckle/dnd-character-sheets) to see these components in use.
+Visit [https://darylbuckle.github.io/dnd-character-sheets](https://darylbuckle.github.io/dnd-character-sheets) to see these components in use.
 
 The attributes in the example can be populated on the web page and outputs to print nicely, so you can populate some attributes on the page and print the sheet. Characters can also be exported to a json file and imported from a json file.
 
