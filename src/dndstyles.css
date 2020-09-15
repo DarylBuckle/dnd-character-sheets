@@ -24,6 +24,7 @@
   width: 100%;
   border: none;
   resize: none;
+  background-position-y: -2px;
 }
 
 .d-and-d-character-sheet .d-and-d-box {

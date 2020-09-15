@@ -250,7 +250,7 @@ const App = (props: any) => {
                 <h5>Related</h5>
                 <ul className="list-unstyled">
                   <li>
-                    <a href="https://darylbuckle.github.io/esper-gen-character-sheets">Esper Genesis Character Sheets</a>
+                    <a href="https://darylbuckle.github.io/espergen-character-sheets">Esper Genesis Character Sheets</a>
                   </li>
                 </ul>
               </div>

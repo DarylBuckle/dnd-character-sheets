@@ -51,9 +51,9 @@ class Example extends Component {
 
 ```DnDCharacterStatsSheet``` renders a stats sheet.
 
-```DnDCharacterProfileSheet``` renders a stats sheet.
+```DnDCharacterProfileSheet``` renders a character traits sheet.
 
-```DnDCharacterSpellSheet``` renders a stats sheet.
+```DnDCharacterSpellSheet``` renders a spell sheet.
 
 
 ## Props
