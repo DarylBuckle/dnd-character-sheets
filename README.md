@@ -66,7 +66,7 @@ Each component can be controlled or uncontrolled. Either character and onCharact
 | -------- |------| ------------|
 | defaultCharacter | DnDCharacter  | An instance of the DnDCharacter class. If character is not set the sheet will initialize with the values specified here. |
 | character | DnDCharacter  | An instance of the DnDCharacter class. If set the sheet will always use the values specified here. |
-| updateCharacter | func (character: DnDCharacter)  | Called whenever a value in a sheet is changed. A modified DnDCharacter object is returned. |
+| onCharacterChanged | func (character: DnDCharacter)  | Called whenever a value in a sheet is changed. A modified DnDCharacter object is returned. |
 
 
 ## DnDCharacter Class
