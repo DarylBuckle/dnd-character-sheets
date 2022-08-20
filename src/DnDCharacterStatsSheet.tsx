@@ -671,7 +671,7 @@ class DnDCharacterStatsSheet extends React.Component<
                     >
                       <DeathSave
                         classes='d-and-d-save-success'
-                        label='Sucesses'
+                        label='Successes'
                         name='deathsaveSuccesses'
                         value={character.deathsaveSuccesses}
                         onChange={(name: string, value: any) => {
