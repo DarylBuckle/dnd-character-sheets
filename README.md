@@ -2,7 +2,7 @@
 
 > Dungeons and Dragons 5th Edition character sheets created in ReactJS.
 
-[https://darylbuckle.github.io/dnd-character-sheets](https://darylbuckle.github.io/dnd-character-sheets)
+[https://dnd5esheets.com](https://dnd5esheets.com)
 
 [![NPM](https://img.shields.io/npm/v/dnd-character-sheets.svg)](https://www.npmjs.com/package/dnd-character-sheets) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -23,7 +23,7 @@
 
 ReactJS components that render Dungeons & Dragons character sheets, namely a character stats sheet, character profile sheet and spell sheet.
 
-Visit [https://darylbuckle.github.io/dnd-character-sheets](https://darylbuckle.github.io/dnd-character-sheets) to see these components in use.
+Visit [https://dnd5esheets.com](https://dnd5esheets.com) to see these components in use.
 
 The attributes in the example can be populated on the web page and outputs to print nicely, so you can populate some attributes on the page and print the sheet. Characters can also be exported to a json file and imported from a json file.
 
