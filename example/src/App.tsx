@@ -126,6 +126,7 @@ const App = (props: any) => {
       }
     
       fr.readAsText(event.target.files[0]);
+      event.target.value = '';
     }
   }
 
