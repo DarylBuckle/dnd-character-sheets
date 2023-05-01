@@ -145,7 +145,9 @@ const App = (props: any) => {
   }
 
   function clearCharacter() {
-    updateCharacter({ })
+    if (window.confirm("Are you sure?")) {
+      updateCharacter({ })
+    }
   }
 
   function getDefaultRedirect(search: string | undefined) {
